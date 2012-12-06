@@ -19,14 +19,14 @@
 			color: #fff;
 			border: 1px solid #777;
 			opacity: .5;
-			@include background(linear-gradient(#999, #888));
+			@include gradient-background-with-ie(#999, #888);
 			&.grp-state-focus {
 				opacity: 1;
 			}
 			&:hover {
 				opacity: 1 !important;
 				border: 1px solid #2987a6 !important;
-				@include background(linear-gradient(#36b0d9, #309bbf));
+				@include gradient-background-with-ie(#36b0d9, #309bbf);
 			}
 			&.grp-add-link {
 				padding-left: 28px;

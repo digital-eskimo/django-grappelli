@@ -1,0 +1,8 @@
+@import "compass/utilities/general/hacks";
+
+@mixin gradient-background-with-ie($start-color, $end-color, $start-position: top) { 
+    @include background-image(linear-gradient($start-position, color-stops($start-color, $end-color)));
+    /* for IE */ 
+    background:$end-color;
+    //filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr='#{$start-color}', endColorstr='#{$end-color}'); 
+}

@@ -15,6 +15,9 @@
         {% else %}
             <link href="{% static "grappelli/stylesheets/mueller/grid/output.css" %}" rel="stylesheet" type="text/css" media="screen" />
         {% endif %}
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     {% endblock %}
     <!-- EXTRASTYLES -->
     {% block extrastyle %}{% endblock %}

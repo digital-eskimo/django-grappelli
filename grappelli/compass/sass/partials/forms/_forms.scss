@@ -419,6 +419,7 @@ ul.radiolist.inline, ul.checkboxlist.inline {
         color: transparent !important;
         background-position: 50% 0;
         background-repeat: no-repeat;
+        @include text-indent;
     }
 }
 ul.errorlist + .selector {

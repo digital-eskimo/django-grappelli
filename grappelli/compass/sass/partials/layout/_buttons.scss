@@ -285,6 +285,7 @@ a.add-another {
     font-size: 11px;
     line-height: 16px;
     @include icons-sprite(add-another);
+    @include text-indent;
 }
 .grp-row {
     a.add-another {

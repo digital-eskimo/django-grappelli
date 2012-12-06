@@ -7,12 +7,15 @@
 @import "compass/reset";
 @import "compass";
 
-$experimental-support-for-svg: true;
+$experimental-support-for-svg: false;
 
 
 
 /*  GRAPPELLI IMPORTS
 ------------------------------------------------------------------------------------------------------ */
+
+@import "partials/ie/gradient";
+@import "partials/ie/sprite_extras";
 
 @import "partials/skins/grp-default";
 
@@ -37,8 +40,6 @@ $experimental-support-for-svg: true;
 @import "partials/layout/filebrowser";
 
 @import "partials/custom/jquery-ui";
-
-
 
 /*  BODY
 ------------------------------------------------------------------------------------------------------ */
@@ -104,7 +105,7 @@ body.grp-login {
 			border: 1px solid #111;
 			border-bottom: 0;
 			@include border-top-radius($grp-border-radius + 1);
-			@include background-image(linear-gradient(#333, #222));
+			@include gradient-background-with-ie(#333, #222);
 			span {
 				display: block;
 				margin: 0;
@@ -129,7 +130,7 @@ body.grp-login {
 					color: #fff;
 					font-size: $grp-font-size-l;
 					font-weight: bold;
-					@include background-image(linear-gradient(lighten($grp-form-button-background-color, 10), $grp-form-button-background-color));
+					@include gradient-background-with-ie(lighten($grp-form-button-background-color, 10), $grp-form-button-background-color);
 				}
 			}
 			+ .grp-row {
@@ -543,9 +544,45 @@ body.grp-popup {
 }
 
 
+/* IE 8 support 
+------------------------------------------------------------------------------------------------------ */
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
 
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
 
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
 
-
-
+.grp-module .grp-row{
+	padding:5px 10px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #DDD;
+}

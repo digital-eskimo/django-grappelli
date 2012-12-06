@@ -30,7 +30,7 @@ table {
             white-space: nowrap;
             border-left: 1px solid $grp-table-border-color;
             border-bottom: 1px solid $grp-table-border-color;
-            @include background-image(linear-gradient(#eee, #e0e0e0));
+            @include gradient-background-with-ie(#eee, #e0e0e0);
             &:first-child {
                 border-left: 0;
             }
@@ -264,19 +264,19 @@ table.grp-sortable {
                     }
                 }
                 &:hover {
-                    @include background-image(linear-gradient(#e0e0e0, #eee));
+                    @include gradient-background-with-ie(#e0e0e0, #eee);
                 }
                 &.sorted {
                     &.ascending {
-                        @include background-image(linear-gradient(#e0e0e0, #eee));
+                        @include gradient-background-with-ie(#e0e0e0, #eee);
                         &:hover {
-                            @include background-image(linear-gradient(#eee, #e0e0e0));
+                            @include gradient-background-with-ie(#eee, #e0e0e0);
                         }
                     }
                     &.descending {
-                        @include background-image(linear-gradient(#eee, #e0e0e0));
+                        @include gradient-background-with-ie(#eee, #e0e0e0);
                         &:hover {
-                            @include background-image(linear-gradient(#e0e0e0, #eee));
+                            @include gradient-background-with-ie(#e0e0e0, #eee);
                         }
                     }
                     a {
